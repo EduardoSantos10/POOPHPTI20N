@@ -1,6 +1,8 @@
 <?php
     namespace PHP\Modelo\DAO;
 
+
+
     require_once("Conexao.php");
     use \PHP\Modelo\DAO\Conexao;
 
@@ -12,7 +14,7 @@
 
                 $conn = $conexao -> conectar();// abrindo conexão com o BD
                 $sql = "Insert into pessoa(codigo, nome, endereco, telefone) 
-                        values('$codigo', '$nome', '$endereco', 'telefone')";
+                        values('$codigo', '$nome', '$endereco', '$telefone')";
 
                 $result = mysqli_query($conn, $sql); // commit no banco
 
@@ -28,7 +30,7 @@
                 return"<br><br>Não Inserido";
 
 
-            }catch(Except $erro){
+            }catch(Exception $erro){
 
                 return "<br>Algo deu errado<br><br>".$erro;
             }

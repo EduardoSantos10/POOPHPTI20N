@@ -1,6 +1,8 @@
 <?php
     namespace PHP\Modelo\DAO;
 
+    use Exception;
+
     class Conexao{
 
         function conectar(){ // metodo para se ligar com o banco de dados
@@ -15,7 +17,7 @@
                 }
                 echo "<br> Algo deu errado";
 
-            }catch(Except $erro){
+            }catch(Exception $erro){
 
                 return "Algo deu errado".$erro;
 
