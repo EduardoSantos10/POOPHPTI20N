@@ -57,6 +57,8 @@
         </button>
 
     </form><!--Fim do Formulário-->
+    <br><br>
+    <a href="menu.php"><button>Voltar</button></a>
 
 </body>
 
